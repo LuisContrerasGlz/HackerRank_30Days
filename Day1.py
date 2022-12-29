@@ -1,18 +1,29 @@
 """
-To complete this challenge, you must save a line of input from stdin to a variable, print Hello, World. on a single line, and finally print the value of your variable on a second line.
+Declare 3 variables: one of type int, one of type double, and one of type String.
+Read 3 lines of input from stdin (according to the sequence given in the Input Format section below) and initialize your  variables.
 
-On the first line, we print the string literal Hello, World.. 
-On the second line, we print the contents of the inputString variable which, for this sample case, happens to be Welcome to 30 Days of Code!. 
-If you do not print the variable's contents to stdout, you will not pass the hidden test case.
+Use the + operator to perform the following operations:
+
+Print the sum of i plus your int variable on a new line.
+Print the sum of d plus your double variable to a scale of one decimal place on a new line.
+Concatenate s with the string you read as input and print the result on a new line.
 
 """
 
-# Read a full line of input from stdin and save it to our dynamically typed variable, input_string.
-input_string = input()
+i = 4
+d = 4.0
+s = 'HackerRank '
+# Declare second integer, double, and String variables.
+# Read and save an integer, double, and String to your variables.
+integervar = int(input(""))
+doublevar = float(input(""))
+stringvar = input("")
 
-# Print a string literal saying "Hello, World." to stdout.
-print('Hello, World.')
+# Print the sum of both integer variables on a new line.
+print(i+integervar)
 
-# TODO: Write a line of code here that prints the contents of input_string to stdout.
-
-print(input_string)
+# Print the sum of the double variables on a new line.
+print(d + doublevar)
+# Concatenate and print the String variables on a new line
+print(s+stringvar)
+# The 's' variable above should be printed first.

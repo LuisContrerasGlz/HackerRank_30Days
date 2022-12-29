@@ -1,29 +1,55 @@
 """
-Declare 3 variables: one of type int, one of type double, and one of type String.
-Read 3 lines of input from stdin (according to the sequence given in the Input Format section below) and initialize your  variables.
 
-Use the + operator to perform the following operations:
+Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, 
+find and print the meal's total cost. Round the result to the nearest integer.
 
-Print the sum of i plus your int variable on a new line.
-Print the sum of d plus your double variable to a scale of one decimal place on a new line.
-Concatenate s with the string you read as input and print the result on a new line.
+
+Function Description
+Complete the solve function in the editor below.
+
+solve has the following parameters:
+
+int meal_cost: the cost of food before tip and tax
+int tip_percent: the tip percentage
+int tax_percent: the tax percentage
+Returns The function returns nothing. Print the calculated value, rounded to the nearest integer.
 
 """
 
-i = 4
-d = 4.0
-s = 'HackerRank '
-# Declare second integer, double, and String variables.
-# Read and save an integer, double, and String to your variables.
-integervar = int(input(""))
-doublevar = float(input(""))
-stringvar = input("")
+#!/bin/python3
 
-# Print the sum of both integer variables on a new line.
-print(i+integervar)
+import math
+import os
+import random
+import re
+import sys
 
-# Print the sum of the double variables on a new line.
-print(d + doublevar)
-# Concatenate and print the String variables on a new line
-print(s+stringvar)
-# The 's' variable above should be printed first.
+#
+# Complete the 'solve' function below.
+#
+# The function accepts following parameters:
+#  1. DOUBLE meal_cost
+#  2. INTEGER tip_percent
+#  3. INTEGER tax_percent
+#
+
+def solve(meal_cost, tip_percent, tax_percent):
+    # Calculate the tip amount
+    tip = meal_cost * tip_percent / 100
+    # Calculate the tax amount
+    tax = meal_cost * tax_percent / 100
+    # Calculate the total cost
+    total_cost = meal_cost + tip + tax
+    # Round the total cost to the nearest integer
+    total_cost_rounded = round(total_cost)
+    # Return the rounded total cost
+    print(total_cost_rounded)
+
+if __name__ == '__main__':
+    meal_cost = float(input().strip())
+
+    tip_percent = int(input().strip())
+
+    tax_percent = int(input().strip())
+
+    solve(meal_cost, tip_percent, tax_percent)
