@@ -13,12 +13,11 @@ import re
 import sys
 
 
-
 if __name__ == '__main__':
     n = int(input().strip())
-    iteracion = 1 
+    iteracion = 1
     while iteracion <= 10:
         resultado = iteracion * n
-        print (f"{n} x {iteracion} = {resultado}")
+        print(f"{n} x {iteracion} = {resultado}")
         # print (resultado)
         iteracion += 1

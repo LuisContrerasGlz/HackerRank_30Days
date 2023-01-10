@@ -33,6 +33,7 @@ import sys
 #  3. INTEGER tax_percent
 #
 
+
 def solve(meal_cost, tip_percent, tax_percent):
     # Calculate the tip amount
     tip = meal_cost * tip_percent / 100
@@ -44,6 +45,7 @@ def solve(meal_cost, tip_percent, tax_percent):
     total_cost_rounded = round(total_cost)
     # Return the rounded total cost
     print(total_cost_rounded)
+
 
 if __name__ == '__main__':
     meal_cost = float(input().strip())

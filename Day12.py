@@ -34,25 +34,27 @@ length of idNumber = 7
 
 
 class Person:
-	def __init__(self, firstName, lastName, idNumber):
-		self.firstName = firstName
-		self.lastName = lastName
-		self.idNumber = idNumber
-	def printPerson(self):
-		print("Name:", self.lastName + ",", self.firstName)
-		print("ID:", self.idNumber)
+    def __init__(self, firstName, lastName, idNumber):
+        self.firstName = firstName
+        self.lastName = lastName
+        self.idNumber = idNumber
+
+    def printPerson(self):
+        print("Name:", self.lastName + ",", self.firstName)
+        print("ID:", self.idNumber)
+
 
 class Student(Person):
     # Declaring the __init__ function and then calling the __init__ function of the Person class using the super() function, and sets the scores of the student to the scores parameter.
     def __init__(self, firstName, lastName, idNumber, scores):
         super().__init__(firstName, lastName, idNumber)
         self.scores = scores
-    
+
     # Calculating the average of the scores and returns a grade character based on the average score.
     def calculate(self):
         total = sum(self.scores)
         average = total / len(self.scores)
-        
+
         if average >= 90:
             return 'O'
         elif average >= 80:
@@ -71,8 +73,8 @@ line = input().split()
 firstName = line[0]
 lastName = line[1]
 idNum = line[2]
-numScores = int(input()) # not needed for Python
-scores = list( map(int, input().split()) )
+numScores = int(input())  # not needed for Python
+scores = list(map(int, input().split()))
 s = Student(firstName, lastName, idNum, scores)
 s.printPerson()
 print("Grade:", s.calculate())

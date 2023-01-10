@@ -29,7 +29,7 @@ phone_book = {}
 # Read in the number of names and phone numbers
 n = int(input())
 
-# Read in the names and phone numbers, 
+# Read in the names and phone numbers,
 for i in range(n):
     name, phone_number = input().split()
     phone_book[name] = phone_number

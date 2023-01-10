@@ -25,6 +25,7 @@ import sys
 # The function accepts INTEGER n as parameter.
 #
 
+
 def factorial(n):
     if n == 0:
         return 1

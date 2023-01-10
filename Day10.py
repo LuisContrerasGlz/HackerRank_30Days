@@ -16,8 +16,9 @@ import sys
 
 if __name__ == '__main__':
     n = int(input().strip())
+
     def max_consecutive_ones(n):
-        binary = bin(n)[2:] # strip the '0b' prefix
+        binary = bin(n)[2:]  # strip the '0b' prefix
         max_count = 0
         current_count = 0
         for bit in binary:
