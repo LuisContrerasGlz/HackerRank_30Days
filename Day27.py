@@ -11,28 +11,21 @@ Each of the T subsequent lines contains an integer, , to be tested for primality
 
 """
 
-import sys
+from math import sqrt
+from sys import stdin
 
 
-def is_prime(n):
-    if n <= 1:
-        return False
-    elif n <= 3:
-        return True
-    elif n % 2 == 0 or n % 3 == 0:
-        return False
-    i = 5
-    while i * i <= n:
-        if n % i == 0 or n % (i + 2) == 0:
+def checkPrime(n):
+    for i in range(2, int(sqrt(n))+1):
+        if n % i is 0:
             return False
-        i += 6
     return True
 
 
-T = int(input())
-for _ in range(T):
-    n = int(input())
-    if is_prime(n):
-        sys.stdout.write("Prime\n")
+n = int(input())
+for line in stdin:
+    val = int(line)
+    if (val >= 2 and checkPrime(val)):
+        print("Prime")
     else:
-        sys.stdout.write("Not Prime\n")
+        print("Not prime")
